@@ -32,4 +32,6 @@ sed -i "$zsh_plugin_line_number"c"\plugins=\(zsh-autosuggestions zsh-syntax-high
 if [ -f $HOME/.oh-my-zsh/themes/polyjuice.zsh-theme ]; then 
     rm -rf $HOME/.oh-my-zsh/themes/polyjuice.zsh-theme
 fi
-ln -i -s $(pwd)/polyjuice.zsh-theme $HOME/.oh-my-zsh/themes/polyjuice.zsh-theme
+
+path_to_theme=$(realpath $0 | sed 's/\.sh/\.zsh-theme/')
+ln -i -s $path_to_theme $HOME/.oh-my-zsh/themes/polyjuice.zsh-theme
