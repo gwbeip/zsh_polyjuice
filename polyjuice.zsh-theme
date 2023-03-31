@@ -81,3 +81,6 @@ ${venv_info}\
  \
 $exit_code
 %{$terminfo[bold]$fg[red]%}%U%*%u %{$reset_color%}%U$%u %{$reset_color%}"
+
+# alias
+alias py=python3
