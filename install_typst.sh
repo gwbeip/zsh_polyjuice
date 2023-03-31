@@ -6,6 +6,7 @@ default_color="\033[m"    # default color (e.g., white)
 whereis cargo
 if [ ! $? == 0 ]; then
     echo -e $error_color Install "cargo" first! $default_color
+    exit 127
 fi
 
 if [ ! -d $HOME/.software/typst ]; then
