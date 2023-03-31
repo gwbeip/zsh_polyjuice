@@ -9,7 +9,7 @@ if [ ! $? == 0 ]; then
 fi
 
 if [ ! -d $HOME/.software/typst ]; then
-    echo -e $note_color git clone -> $HOME/.software/typst$default_color
+    echo -e "$note_color git clone -> $HOME/.software/typst$default_color"
     git clone https://github.com/typst/typst.git $HOME/.software/typst
 else
     cd $HOME/.software/typst
