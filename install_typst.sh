@@ -1,3 +1,8 @@
+whereis cargo
+if [ ! $? == 0 ]; then
+    echo Install "cargo" first!
+fi
+
 if [ ! -d $HOME/.software/typst ]; then
     git clone https://github.com/typst/typst.git $HOME/.software/typst
 else
