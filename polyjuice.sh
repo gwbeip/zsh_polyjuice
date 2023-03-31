@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Configure ZSH
 if [ ! -d $HOME/.oh-my-zsh ]; then
     git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
 fi
@@ -35,3 +36,21 @@ fi
 
 path_to_theme=$(realpath $0 | sed 's/\.sh/\.zsh-theme/')
 ln -i -s $path_to_theme $HOME/.oh-my-zsh/themes/polyjuice.zsh-theme
+
+# Configure the software folder: $HOME/.software
+if [ ! -d $HOME/.software ]; then
+    mkdir $HOME/.software
+fi
+
+if [ ! -f $HOME/.software/software_env.sh ]; then
+    touch $HOME/.software/software_env.sh
+fi
+
+if [ ! -f $HOME/.zshenv ]; then
+    touch $HOME/.zshenv
+fi
+
+nl $HOME/.zshenv | grep \.software/software_env\.sh > /dev/null
+if [ ! $? == 0 ]; then
+    echo ". $HOME/.software/software_env.sh" >> $HOME/.zshenv
+fi
