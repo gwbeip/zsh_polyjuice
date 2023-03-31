@@ -15,7 +15,7 @@ if [ ! -d $HOME/.software/typst ]; then
 else
     cd $HOME/.software/typst
     echo -e $note_color git pull @ $(pwd)$default_color
-    # git pull
+    git pull
 fi
 
 cd $HOME/.software/typst
