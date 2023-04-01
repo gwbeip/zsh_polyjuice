@@ -83,6 +83,15 @@ $exit_code
 %{$terminfo[bold]$fg[red]%}%U%*%u %{$reset_color%}%U$%u %{$reset_color%}"
 
 # source $HOME/.software/software_env.sh
+function add_path_to_software_env() {
+	echo -e "\033[4;36mAdd [$(pwd)] to software evn\033[m"
+	grep $(pwd) $HOME/.software/software_env.sh
+	if [[ ! $? == 0 ]]; then
+		echo "export PATH=$(pwd):\$PATH" >> $HOME/.software/software_env.sh
+	fi
+
+}
 . $HOME/.software/software_env.sh
 # alias
 alias py=python3
+alias ap2se=add_path_to_software_env
