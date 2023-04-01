@@ -82,5 +82,7 @@ ${venv_info}\
 $exit_code
 %{$terminfo[bold]$fg[red]%}%U%*%u %{$reset_color%}%U$%u %{$reset_color%}"
 
+# source $HOME/.software/software_env.sh
+. $HOME/.software/software_env.sh
 # alias
 alias py=python3

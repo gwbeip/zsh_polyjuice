@@ -46,11 +46,11 @@ if [ ! -f $HOME/.software/software_env.sh ]; then
     touch $HOME/.software/software_env.sh
 fi
 
-if [ ! -f $HOME/.zshenv ]; then
-    touch $HOME/.zshenv
-fi
+# if [ ! -f $HOME/.zshenv ]; then
+#     touch $HOME/.zshenv
+# fi
 
-nl $HOME/.zshenv | grep \.software/software_env\.sh > /dev/null
-if [ ! $? == 0 ]; then
-    echo ". $HOME/.software/software_env.sh" >> $HOME/.zshenv
-fi
+# nl $HOME/.zshenv | grep \.software/software_env\.sh > /dev/null
+# if [ ! $? == 0 ]; then
+#     echo ". $HOME/.software/software_env.sh" >> $HOME/.zshenv
+# fi
