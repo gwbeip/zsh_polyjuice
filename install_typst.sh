@@ -26,5 +26,4 @@ nl $HOME/.software/software_env.sh | grep "export PATH=\$HOME/.software/typst/ta
 if [ ! $? == 0 ]; then
     echo -e $note_color Write $HOME/.software/typst/target/release to \$PATH$default_color
     echo export PATH=\$HOME/.software/typst/target/release:\$PATH >> $HOME/.software/software_env.sh
-    source ~/.zshrc
 fi
