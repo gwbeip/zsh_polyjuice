@@ -7,12 +7,12 @@ YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}o"
 
 # Git info
 git_branch_info () {
-		local git_branch_name=$(git branch --show-current 2&> /dev/null | xargs -I branch echo "branch")
-		if [[ $git_branch_name = "" ]]; then
-			echo ""
-		else
-			echo "${ZSH_THEME_GIT_PROMPT_PREFIX}$git_branch_name${ZSH_THEME_GIT_PROMPT_SUFFIX}"
-		fi
+	local git_branch_name=$(git branch --show-current 2&> /dev/null | xargs -I branch echo "branch")
+	if [[ $git_branch_name = "" ]]; then
+		echo ""
+	else
+		echo "${ZSH_THEME_GIT_PROMPT_PREFIX}$git_branch_name${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+	fi
 }
 
 local git_info='$(git_branch_info)'
