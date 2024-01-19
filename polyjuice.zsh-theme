@@ -107,13 +107,13 @@ function brewthu() {
 		# Bottles
 		export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 	else
-		unset HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
-		unset HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
-		unset HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-		unset HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-		unset HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
+		unset HOMEBREW_API_DOMAIN
+		unset HOMEBREW_BOTTLE_DOMAIN
+		unset HOMEBREW_BREW_GIT_REMOTE
+		unset HOMEBREW_CORE_GIT_REMOTE
+		unset HOMEBREW_PIP_INDEX_URL
 		# Bottles
-		unset HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+		unset HOMEBREW_BOTTLE_DOMAIN
 	fi
 }
 
